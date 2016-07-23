@@ -76,6 +76,8 @@ void setup() {
 }
 
 void loop() {
+
+  //Add subsequent function calls for each button
   updateButton(0, leftKey);
   updateButton(1, rightKey);
 }
@@ -85,6 +87,7 @@ void loop() {
 //There is also the "holdCheck" function which allows the message to be continued to be sent 
 //at an interal until released. 
 
+//_i = which button from buttonPin[], _s is the keystroke to be sent 
 void updateButton(int _i, char _s) {
   // read the state of the switch into a local variable:
   reading[_i] = digitalRead(buttonPin[_i]);
